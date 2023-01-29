@@ -15,10 +15,11 @@ function solution(sticker) {
   const dp2 = new Array(len).fill(0);
   if (sticker.length === 1) return sticker[0];
   /**
+   * z
    * 1. DP 점화식 : dp[i] = Math.max(dp[i-1], dp[i-2] + sticker[i]);
    * 2. i는 0부터 시작하기 때문에 가장 낮은 2부터 시작한다
    * 3. Boundry Condition은 처음 스티커를 제외한 경우를 고려해야한다.
-   *    dp1는 첫스티커를 포함, dp2는 제외하여 시작한다.
+   *    dp1는z 첫스티커를 포함, dp2는 제외하여 시작한다.
    */
 
   for (let i = 2; i < len - 1; i++)
